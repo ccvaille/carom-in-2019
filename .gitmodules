@@ -1,0 +1,3 @@
+[submodule "coolfe-videojs/videojs-font"]
+	path = coolfe-videojs/videojs-font
+	url = https://github.com/videojs/font
