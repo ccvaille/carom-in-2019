@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ececec;
+}
+
+.box {
+    background: #fff;
+    margin:  50px auto;
+    width: 960px;
+    padding: 30px;
+    border: 1px solid #ddd;
+}
