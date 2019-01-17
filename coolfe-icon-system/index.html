@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>icon-system(20190117)</title>
+    <style>
+        .inline-svg img {
+            width: 30px;
+        }
+        .inline-svg img:hover,
+        .inline-svg hover:hover {
+            color: blue;
+        }
+        .icon-system svg {
+            fill: blue;
+            width: 30px;
+            height: 30px;
+        }
+        .icon-system svg:hover {
+            fill: green;
+        }
+    </style>
+</head>
+<body>
+    <h4>img/background/inline svg</h4>
+    <div class="inline-svg">
+        <img src="./outline-fingerprint-24px.svg" alt="">
+        <div style="background: url('./outline-sentiment_satisfied_alt-24px.svg') no-repeat; width: 30px;
+    height: 30px;"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <path d="M17 3H7c-1.1 0-1.99.9-1.99 2L5 21l7-3 7 3V5c0-1.1-.9-2-2-2zm0 15l-5-2.18L7 18V5h10v13z" />
+            <path d="M0 0h24v24H0z" fill="none" />
+        </svg>
+    </div>
+    <hr>
+    <h4>Try to hover</h4>
+    <div class="icon-system">
+        <svg style="display: none">
+            <defs>
+                <symbol id="accessibility" viewBox="0 0 24 24">
+                    <path fill="none" d="M0 0h24v24H0V0z" />
+                    <path d="M20.5 6c-2.61.7-5.67 1-8.5 1s-5.89-.3-8.5-1L3 8c1.86.5 4 .83 6 1v13h2v-6h2v6h2V9c2-.17 4.14-.5 6-1l-.5-2zM12 6c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z" />
+                </symbol>
+                <symbol id="balance" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z" />
+                </symbol>
+            </defs>
+        </svg>
+        <svg class="accessibility">
+            <use xlink:href="#accessibility"></use>
+        </svg>
+        <svg class="balance">
+            <use xlink:href="#balance"></use>
+        </svg>
+    </div>
+
+</body>
+</html>
