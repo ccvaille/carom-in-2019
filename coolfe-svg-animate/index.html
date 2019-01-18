@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>svg-aimate(20180118)</title>
+    <style>
+        #Artboard {
+            animation: changeColor 2s infinite;
+        }
+        @keyframes changeColor {
+            to {
+                fill: red;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h3>CSS @keyframes</h3>
+    <svg width="59px" height="59px" viewBox="0 0 59 59">
+        <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+        <desc>Created with Sketch.</desc>
+        <defs></defs>
+        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+            <g id="Artboard" transform="translate(-50.000000, -53.000000)" fill="#F8E71C" stroke="#322626">
+                <circle id="Oval" cx="79.5" cy="82.5" r="28.5"></circle>
+            </g>
+        </g>
+    </svg>
+    <hr>
+    <h3>animate</h3>
+        <svg width="59px" height="59px" viewBox="0 0 59 59">
+            <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+            <desc>Created with Sketch.</desc>
+            <defs></defs>
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <g transform="translate(-50.000000, -53.000000)" fill="red" stroke="#322626">
+                    <circle id="Oval" cx="79.5" cy="82.5" r="28.5">
+                        <animate attributeName="fill" dur="2000ms" to="F8E71C" repeatCount="indefinite"></animate>
+                    </circle>
+                </g>
+            </g>
+        </svg>
+    <hr>
+    <h3>SnapSVG</h3>
+    <svg width="200px" height="200px" id="playground" viewBox="0 0 200 200"></svg>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.3.0/snap.svg-min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
