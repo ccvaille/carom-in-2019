@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>returnRank(20190122)</title>
+</head>
+<body>
+    <!-- 输出 1- 10 数字对应等级 A - E -->
+    <div id="box">
+        <input type="number" placeholder="请输入 1 - 10 数字" id="input">
+        <button>计算等级</button>
+        <p><span>你的等级是 </span><span id="res"></span></p>
+    </div>
+    <script>
+        const input = document.getElementById('input');
+        const span = document.getElementById('res');
+        const btn = document.getElementsByTagName('button')[0];
+
+        const rank = {a: [1,2], b: [3,4], c: [5,6], d: [7,8], e: [9,10]};
+        const rankKeys = Object.keys(rank);
+
+        let inputValue = '';
+
+        input.oninput = (e) => {
+            inputValue = parseInt(e.target.value);
+        }
+
+        btn.onclick = () => {
+            if(inputValue == '' || inputValue > 10)  return;
+            
+            rankKeys.map(i => {
+               if(rank[i].indexOf(inputValue) > -1) {
+                   span.innerText = i.toUpperCase();
+               }
+            })
+        }
+    </script>
+</body>
+</html>
