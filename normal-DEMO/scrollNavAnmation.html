@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>scrollNavAnmation(20190124)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100px;
+            transition: top .5s;
+        }
+        #nav.active {
+            top: -50px;
+        }
+        p:nth-child(1) {
+            background: #333;
+            height: 50px;
+        }
+        p:nth-child(2) {
+            background: #ececec;
+            height: 50px;
+        }
+        .page {
+            height: 100vh;
+            background: yellowgreen;
+            margin-top: 110px;
+        }
+        .page1 {
+            height: 100vh;
+            background: peru;
+        }
+    </style>
+</head>
+<body>
+    <nav id="nav">
+        <p></p>
+        <p></p>
+    </nav>
+    <div class="page"></div>
+    <div class="page1"></div>
+    <script>
+        // 滚轮向上向下，触发导航动画效果
+        const nav = document.getElementById('nav');
+        let oldTop = 0;
+
+        window.onscroll = () => {
+            const windowScollTop = document.documentElement.scrollTop || document.body.srcollTop || 0;
+             if (oldTop < windowScollTop) {
+                nav.className = 'active';
+            } else {
+                nav.className = '';
+            }
+            oldTop = windowScollTop > 0 ? windowScollTop : 0;
+        }
+    </script>
+</body>
+</html>
