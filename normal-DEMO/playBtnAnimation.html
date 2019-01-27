@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>playBtnAnimation(20190127)</title>
+    <style>
+        #box {
+            position: absolute;
+            display: flex;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 50px;
+            height: 50px;
+            border: 2px solid orange;
+            padding: 5px;
+            border-radius: 50%;
+            cursor: pointer;
+            justify-content: center;
+            align-items: flex-end;
+            box-sizing: border-box;
+        }
+        #box:before,
+        #box:after {
+            position: absolute;
+            content: "";
+            width: 4px;
+            height: 17px;
+            background-color: #ffa800;
+            left: 16px;
+            top: 16px;
+        }
+        #box:after {
+            background-color: #ffa800;
+            left: auto;
+            right: 16px;
+        }
+        i {
+            display: inline-block;
+            opacity: 0;
+            width: 2px;
+            height: 17px;
+            background: #ffa800;
+            margin-right: 3px;
+            top: 16px;
+        }
+        .playing i {
+            opacity: 1;
+            animation: music 1s infinite;
+            transition: opacity 0s .58s;
+        }
+        i:first-child {
+            animation-delay: .2s;
+        }
+        i:nth-child(2) {
+            animation-delay: .5s;
+        }
+        i:nth-child(3) {
+            animation-delay: .3s;
+        }
+        i:nth-child(4) {
+            animation-delay: .1s;
+        }
+        i:last-child {
+            animation-delay: .2s;
+            margin-right: 0;
+        }
+        .playing:before {
+            animation: changeLeft .5s forwards;
+        }
+        .playing:after {
+            animation: changeRight .5s forwards;
+        }
+
+        @keyframes changeLeft {
+            90% {
+                left: 28px;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes changeRight {
+            90% {
+                right: 28px;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+        @keyframes show {
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes music {
+            0% {
+                height: 17px;
+            }
+            50% {
+                height: 0;
+            }
+            100% {
+                height: 17px;
+            }
+        }
+
+        #audio {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+    </div>
+
+    <audio src="./assets/Matt Zachary - 英雄联盟的姑娘们.mp3" controls id="audio"></audio>
+
+    <script>
+        const box = document.getElementById('box');
+        const audio = document.getElementById('audio');
+
+        box.onclick = () => {
+            box.classList.toggle("playing");
+
+            if(!box.classList.contains('playing')) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+        }
+    </script>
+</body>
+</html>
