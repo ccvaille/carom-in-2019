@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tabAnimation(20190128)</title>
+    <style>
+        div {
+            width: 200px;
+            height: 500px;
+            opacity: 0;
+            background: orange;
+        }
+        .show {
+            animation: tab 0.5s linear forwards;
+        }
+        @keyframes tab{
+            from{
+                transform:translateX(-20px);
+                opacity:0;
+            }
+            to{
+                transform:translateX(0px);
+                opacity:1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <button id="btn">click</button>
+
+    <script>
+        const btn = document.getElementById('btn');
+        const box = document.getElementById('box');
+
+        btn.onclick = () => {
+            box.classList.toggle('show');
+        }
+
+    </script>
+</body>
+</html>
