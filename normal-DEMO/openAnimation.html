@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>openAnimation(20190129)</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        #box {
+            background: peru;
+            height: 70vh;
+            background: url("./assets/black_cat.jpg");
+            background-size: cover;
+            cursor: pointer;
+        }
+        #box:hover .left,
+        #box:hover .right {
+            width: 0;
+        }
+
+        .left,
+        .right {
+            position: absolute;
+            top: 0;
+            height: 70vh;
+            width: 50%;
+            opacity: .6;
+            transition: width 1s;
+        }
+        .left {
+            left: 0;
+            background: #164276;
+            border-right: 1px solid #000;
+        }
+        .right {
+            right: 0;
+            background: #000;
+            border-left: 1px solid #164276;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+</body>
+</html>
