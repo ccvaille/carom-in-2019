@@ -1,0 +1,44 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "Git 技巧"
+    },
+    {
+      "id": "2",
+      "title": "React 技巧"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "body": "评论1",
+      "post": "1"
+    },
+    {
+      "id": "2",
+      "body": "评论2",
+      "post": "1"
+    },
+    {
+      "body": "hello",
+      "id": "HJPNS0cNf",
+      "post": "2"
+    },
+    {
+      "body": "热舞",
+      "post": "2",
+      "id": "ZWy-6A8"
+    },
+    {
+      "body": "叒微软",
+      "post": "1",
+      "id": "foTpxK_"
+    },
+    {
+      "body": "213212",
+      "post": "1",
+      "id": "suGU7l1"
+    }
+  ]
+}
