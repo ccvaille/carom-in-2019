@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+body .box {
+  background: pink;
+  font-size: 18px;
+  color: #fff;
+}
