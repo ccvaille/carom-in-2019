@@ -1,0 +1,13 @@
+# functional programming
+- 纯函数
+    - 相同输入得到相同输出
+    - 变量具有不变性
+- 高阶函数
+    - 把其他函数作为自己参数或者返回值的函数
+    - map/reduce/filter
+    - 作为参数传入的函数，通常叫做回调函数
+- curry
+    - 通过部分的参数呼叫一个 function，这样会返回一个新 function ，新 function 中去传入其他参数来完成最终运算
+- Plugin
+    - ramda: 实现了常见逻辑的高阶函数
+    - immutable： 保证不用拷贝原始数据，同时又保证不变性
