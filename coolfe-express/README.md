@@ -1,0 +1,3 @@
+- 前端生成用 `react-static`
+- 数据用 `Mongoose`
+- 自动重启用 `nodemon`
